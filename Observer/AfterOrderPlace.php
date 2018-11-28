@@ -11,10 +11,7 @@ class AfterOrderPlace extends \MageSuite\SampleOrderExport\Observer\AbstractOrde
     {
         $status = [
             'status' => 'ready_to_generate',
-            'label' => 'Order is ready to generate export file',
-            'completed' => '1',
-            'sort_order' => '100',
-            'disabled' => '0'
+            'completed' => '1'
         ];
         $this->exportStatusRepository->addStatus($observer->getOrder(), $status);
 
@@ -26,10 +23,7 @@ class AfterOrderPlace extends \MageSuite\SampleOrderExport\Observer\AbstractOrde
 
         $status = [
             'status' => 'file_generated',
-            'label' => 'Order export file was generated',
-            'completed' => '1',
-            'sort_order' => '200',
-            'disabled' => '0'
+            'completed' => '1'
         ];
         $this->exportStatusRepository->addStatus($observer->getOrder(), $status);
 

@@ -11,10 +11,7 @@ class AfterCapturePayment extends \MageSuite\SampleOrderExport\Observer\Abstract
     {
         $status = [
             'status' => 'payment_created',
-            'label' => 'Order was payed',
-            'completed' => '1',
-            'sort_order' => '500',
-            'disabled' => '0'
+            'completed' => '1'
         ];
         $this->exportStatusRepository->addStatus($observer->getInvoice()->getOrder(), $status);
 
@@ -27,10 +24,7 @@ class AfterCapturePayment extends \MageSuite\SampleOrderExport\Observer\Abstract
 
         $status = [
             'status' => 'file_exported',
-            'label' => 'Order export file was exported to ERP',
-            'completed' => '1',
-            'sort_order' => '300',
-            'disabled' => '0'
+            'completed' => '1'
         ];
         $this->exportStatusRepository->addStatus($observer->getInvoice()->getOrder(), $status);
 
@@ -42,10 +36,7 @@ class AfterCapturePayment extends \MageSuite\SampleOrderExport\Observer\Abstract
 
         $status = [
             'status' => 'file_processed_by_erp',
-            'label' => 'Order export file was processed by ERP',
-            'completed' => '1',
-            'sort_order' => '400',
-            'disabled' => '0'
+            'completed' => '1'
         ];
         $this->exportStatusRepository->addStatus($observer->getInvoice()->getOrder(), $status);
 

@@ -16,10 +16,7 @@ class AfterOrderSave extends \MageSuite\SampleOrderExport\Observer\AbstractOrder
 
             $status = [
                 'status' => 'order_completed',
-                'label' => 'Order is completed',
                 'completed' => '1',
-                'sort_order' => '700',
-                'disabled' => '0'
             ];
             $this->exportStatusRepository->addStatus($observer->getOrder(), $status);
 

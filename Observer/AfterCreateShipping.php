@@ -11,10 +11,7 @@ class AfterCreateShipping extends \MageSuite\SampleOrderExport\Observer\Abstract
     {
         $status = [
             'status' => 'order_shipped',
-            'label' => 'Order was shipped',
-            'completed' => '1',
-            'sort_order' => '600',
-            'disabled' => '0'
+            'completed' => '1'
         ];
         $this->exportStatusRepository->addStatus($observer->getShipment()->getOrder(), $status);
 
