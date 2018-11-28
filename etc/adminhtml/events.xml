@@ -1,0 +1,9 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_order_shipment_save_after">
+        <observer name="magesuite_shipping_create" instance="MageSuite\SampleOrderExport\Observer\AfterCreateShipping"/>
+    </event>
+    <event name="sales_order_save_before">
+        <observer name="magesuite_order_save_before" instance="MageSuite\SampleOrderExport\Observer\AfterOrderSave"/>
+    </event>
+</config>

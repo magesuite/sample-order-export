@@ -1,0 +1,12 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_submit_all_after">
+        <observer name="magesuite_after_order_placed" instance="MageSuite\SampleOrderExport\Observer\AfterOrderPlace"/>
+    </event>
+    <event name="sales_order_invoice_pay">
+        <observer name="magesuite_invoice_pay" instance="MageSuite\SampleOrderExport\Observer\AfterCapturePayment"/>
+    </event>
+    <event name="sales_order_save_before">
+        <observer name="magesuite_order_save_before" instance="MageSuite\SampleOrderExport\Observer\AfterOrderSave"/>
+    </event>
+</config>
